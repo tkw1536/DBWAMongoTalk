@@ -1,0 +1,55 @@
+\documentclass{beamer}
+
+%Packages
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+
+% Hide navigation symbols, show git
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+\newcommand{\inote}[1]{
+  {
+    \begin{itemize}
+      \item #1
+    \end{itemize}
+  }
+}
+
+% Logos
+\newcommand{\logoimage}[2]{\begingroup
+\setbox0=\hbox{\includegraphics[height=#2]{#1}}%
+\parbox{\wd0}{\box0}\endgroup\ }
+
+%META-INFORMATION
+\title{MongoDB: A document-oriented database}
+\author{Tom Wiesing}
+\institute{Databases \& Web Applications}
+\date{TBA}
+
+\begin{document}
+    %TITLEPAGE
+    \frame{\titlepage}
+
+    \begin{frame}{Overview}
+      \begin{itemize}
+          \item Introduction
+      \end{itemize}
+    \end{frame}
+
+    \input{parts/01_intro.tex}
+
+    \begin{frame}{The end}
+      {\huge
+        Thank you for your attention!\\
+        Any Questions, Comments, etc?
+      }
+
+      \begin{itemize}
+        \item Image Sources:
+        \begin{itemize}
+          \item \url{https://en.wikipedia.org/wiki/MongoDB}
+        \end{itemize}
+      \end{itemize}
+    \end{frame}
+\end{document}
