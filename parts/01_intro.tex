@@ -1,13 +1,76 @@
-\begin{frame}{Introduction (1): What are document-oriented databases?}
-  \begin{columns}[onlytextwidth]
-    \begin{column}{0.6\textwidth}
-      \begin{itemize}
-          \item stuff
-            \inote{...}
-      \end{itemize}
-    \end{column}
-    \begin{column}[t]{0.4\textwidth}
-      %\includegraphics[width=0.95\textwidth]{imgs/vc_wikipedia}
-    \end{column}
-  \end{columns}
+\begin{frame}{Introdution (1): Document-oriented databases}
+  \begin{itemize}
+    \item document-oriented databases
+    \begin{itemize}
+      \item stores documents
+      \item create, read, update and delete documents
+    \end{itemize}
+    \item documents do \textbf{not} have to be of the same shape
+    \begin{itemize}
+      \item oriented on the data itself, not the shape
+      \item flexible w.r.t. data inside them
+        \inote{missing / optional values easy to incoperate}
+      \item easy to change format of data on-demand
+      \item referential integrity (if applicable) difficult
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Introdution (2): Structure of MongoDB}
+  \begin{itemize}
+    \item \logoimage{imgs/logo}{20px} is an open-source, document database designed for ease of development and scaling
+    \begin{itemize}
+      \item{so it is document-oriented}
+    \end{itemize}
+    \item stores documents so-called ``records''
+    \begin{itemize}
+      \item documents are essentially JSON, i.e. key-value pairs
+      \item keys are strings
+      \item values can for example be strings, numbers, other documents, arrays of values, arrays of other documents
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Introdution (3): Structure of MongoDB}
+  \begin{tabular}{c}
+    \begin{lstlisting}
+{
+  "_id" : ObjectId("54c955492b7c8eb21818bd09"),
+  "address" : {
+    "street" : "2 Avenue",
+    "zipcode" : "10075",
+    "building" : "1480",
+    "coord" : [ -73.9557413, 40.7720266 ],
+  },
+  "borough" : "Manhattan",
+  "cuisine" : "Italian",
+  "grades" : [
+    {
+      "date" : ISODate("2014-10-01T00:00:00Z"),
+      "grade" : "A",
+      "score" : 11
+    },
+    {
+      "date" : ISODate("2014-01-16T00:00:00Z"),
+      "grade" : "B",
+      "score" : 17
+    }
+  ],
+  "name" : "Vella",
+  "restaurant_id" : "41704620"
+}
+    \end{lstlisting}
+  \end{tabular}
+\end{frame}
+
+\begin{frame}[fragile]{Introdution (4): Structure of MongoDB}
+  \centering
+  \begin{itemize}
+    \item each mongodb server can host several databases
+      \inote{like in MySQL}
+    \item each database can host several collections
+      \inote{similar to tables}
+    \item each collection contains a set of documents
+      \inote{\textbf{but:} documents do not need to be of the same shape}
+  \end{itemize}
 \end{frame}
