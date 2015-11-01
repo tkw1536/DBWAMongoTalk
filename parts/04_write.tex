@@ -1,0 +1,38 @@
+\begin{frame}{Advanced Write Operations (1): Atomicity}
+  \begin{itemize}
+      \item MongoDB write operations are atomic on the level of a document
+        \inote{if two properties are update don one document nothing can happen in between}
+      \item there are several so called ``write concerns''
+      \begin{itemize}
+        \item Guarantee that something is actually written to the database
+        \item can provide different levels of guarantee
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Advanced Write Operations(2): Write concerns}
+  \begin{itemize}
+    \item there are four levels
+    \begin{itemize}
+      \item Unacknowledged
+        \inote{returns immediatly}
+      \item Acknowledged (default)
+        \inote{write to the database then return}
+      \item Journaled
+        \inote{write to Journal ($=$ disk) then return}
+      \item Replica Acknowledged
+        \inote{write to database and backups then return}
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Advanced Write Operations (3): Transactions}
+  \begin{itemize}
+    \item sometimes more than a single operation needs to be atomic
+      \inote{for example transfer money from one account to another}
+    \item we want to ensure that either all or none of the operations are run
+      \inote{we run them in one so-called transaction}
+    \item MongoDB does this with so-called ``Bulk Write Operations''
+      \inote{we do not go into details here}
+  \end{itemize}
+\end{frame}

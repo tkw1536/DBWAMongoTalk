@@ -15,7 +15,21 @@
 \definecolor{delim}{RGB}{20,105,176}
 \colorlet{numb}{magenta!60!black}
 
-\lstset{language=[LaTeX]TeX,
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+\lstset{language=JavaScript,
   basicstyle=\tiny\ttfamily,
   stepnumber=1,
   numbersep=8pt,
@@ -71,9 +85,10 @@
     \begin{frame}{Overview}
       \begin{itemize}
           \item Introduction \& Structure of MongoDB
-          \item CRUD operations in MongoDB
-          \item Using MongoDB from NodeJS
-          \item Further topics \& Conclusion
+          \item CRUD operations \& Basic querying
+          \item Aggregation Operations
+          \item Advanced Write Operations
+          \item Summary \& Further topics
       \end{itemize}
     \end{frame}
 
@@ -81,9 +96,11 @@
 
     \input{parts/02_crud.tex}
 
-    \input{parts/03_nodejs.tex}
+    \input{parts/03_aggregation.tex}
 
-    \input{parts/04_conclusion.tex}
+    \input{parts/04_write.tex}
+
+    \input{parts/05_conclusion.tex}
 
     \begin{frame}{The end}
       {\huge
@@ -94,12 +111,14 @@
       \begin{itemize}
         \item Sources:
         \begin{itemize}
+          \item \url{https://docs.mongodb.org/manual/}
           \item \url{https://en.wikipedia.org/wiki/MongoDB}
-          \item \url{https://en.wikipedia.org/wiki/Document-oriented_database}
         \end{itemize}
         \item Image Sources:
         \begin{itemize}
           \item \url{https://www.mongodb.com/brand-resources}
+          \item \url{https://docs.mongodb.org/manual/_images/map-reduce.png}
+          \item \url{https://docs.mongodb.org/manual/_images/aggregation-pipeline.png}
         \end{itemize}
       \end{itemize}
     \end{frame}
