@@ -3,7 +3,6 @@
       \item CRUD (Create, Read, Update, Delete) in MongoDB
         \inote{You need to be able to do something with the database}
       \item we will use the shell for now
-        \inote{We will talk about integration into programming languages later}
       \item Queries themselves are JSON
         \inote{we use a version of javascript to specify the operation itself}
       \item enter them in an interactive shell (the ``mongo'' executable)
@@ -15,7 +14,7 @@
   \begin{itemize}
     \item \lstinline[basicstyle=\ttfamily]{show databases}
       \inote{shows available databases}
-    \item \lstinline[basicstyle=\ttfamily]{use some\_awesome\_database}
+    \item \lstinline[basicstyle=\ttfamily]{use some_awesome_database}
       \inote{switches to a database}
     \item \lstinline[basicstyle=\ttfamily]{show collections}
       \inote{show all collections in the current database}
@@ -24,13 +23,13 @@
 
 \begin{frame}[fragile]{CRUD operations (3): Find, insert, update, remove}
   \begin{itemize}
-    \item \lstinline[basicstyle=\ttfamily]{db.my\_collection.find(query)}
+    \item \lstinline[basicstyle=\ttfamily]{db.my_collection.find(query)}
       \inote{find everything that matches the query}
-    \item \lstinline[basicstyle=\ttfamily]{db.my\_collection.insert(documents)}
+    \item \lstinline[basicstyle=\ttfamily]{db.my_collection.insert(documents)}
       \inote{insert new documents into a collection}
-    \item \lstinline[basicstyle=\ttfamily]{db.my\_collection.update(query, change)}
+    \item \lstinline[basicstyle=\ttfamily]{db.my_collection.update(query, change)}
       \inote{update every document that matches the query}
-    \item \lstinline[basicstyle=\ttfamily]{db.my\_collection.remove(query)}
+    \item \lstinline[basicstyle=\ttfamily]{db.my_collection.remove(query)}
       \inote{remove every document that matches the query}
   \end{itemize}
 \end{frame}
